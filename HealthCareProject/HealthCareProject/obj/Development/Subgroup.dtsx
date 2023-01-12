@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/16/2022 5:12:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CRD8C2K"
+  DTS:CreatorName="DESKTOP-CRD8C2K\HP"
+  DTS:DTSID="{0E2967F1-5F5A-4984-BC9A-B18AF8373155}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{68F631B2-4796-4A47-B309-AD0822091951}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7BDF1776-2DA1-4173-8A85-C8EC0EB1AC73}"
+      DTS:ObjectName="DESKTOP-CRD8C2K.HealthCareSystem">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CRD8C2K;Initial Catalog=HealthCareSystem;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{88182462-0419-4868-9A8C-232CD3EB38FC}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\Subgrp_Tab.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_ID"
+              DTS:DTSID="{B197559F-FA44-4A13-A159-B39CAFF7EDA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_NAME"
+              DTS:DTSID="{AACE26B3-1A85-4648-972F-D7AEE199340A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_DT"
+              DTS:DTSID="{993C416A-BBC1-432E-AB6E-EB023BBFDCC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERM_DT"
+              DTS:DTSID="{99381FD8-277D-4D99-AF5A-38F0866F0A26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GROUP_ID"
+              DTS:DTSID="{22806253-4ED3-4471-877F-573751AE0691}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4BA4C99E-8E53-4534-B37B-8C59023CBAEC}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\SUBGRP_JOINERROR.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_ID"
+              DTS:DTSID="{280FCE1B-4860-49AC-B6E6-1140FFDB3DC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_NAME"
+              DTS:DTSID="{0C6C9DA1-928E-4686-B080-7D1928844F8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_DT"
+              DTS:DTSID="{D79CAF65-46B1-4C93-BFD0-2F7633932FAB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERM_DT"
+              DTS:DTSID="{AFBC47CF-0053-47E3-AA0A-648D1ABB77E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GROUP_ID"
+              DTS:DTSID="{69B3B70D-85CC-4AFF-9AB3-24DAEBAB9A7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NW_SUBGRP_ID"
+              DTS:DTSID="{8C93C347-6D0A-4BF8-9D48-D9764603EA80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NW_GRP_ID"
+              DTS:DTSID="{02F66D02-4993-4D27-AA00-229B34E6D259}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of NW_SUBGRP_ID"
+              DTS:DTSID="{A05C263B-642D-4934-97BA-5E0D982AF685}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of NW_GRP_ID"
+              DTS:DTSID="{8B90F146-A3B4-47BF-B453-EAC4B5703552}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Data SubGroup"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4ECEE20E-9095-4EAA-A9CB-6F9CF23AEAC3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Data SubGroup"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Data SubGroup\check NUll"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="check NUll"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input].Columns[SUBGRP_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="SUBGRP_NAME"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input].Columns[GROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GROUP_ID"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data SubGroup\check NUll.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]}) || [ISNULL](#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]}) || [ISNULL](#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]}) || [ISNULL](#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]}) || [ISNULL](#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(SUBGRP_ID) || ISNULL(EFF_DT) || ISNULL(TERM_DT) || ISNULL(SUBGRP_NAME) || ISNULL(GROUP_ID)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data SubGroup\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"000" + #{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"000" + SUBGRP_ID</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input].Columns[GROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GROUP_ID"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"000" + #{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"000" + GROUP_ID</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data SubGroup\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data SubGroup\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].Columns[SUBGRP_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="SUBGRP_NAME"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_NAME]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].Columns[GROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GROUP_ID"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GROUP_ID]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="SUBGRP_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      dataType="date"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      dataType="date"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GROUP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_SUBGRP_ID]"
+                      dataType="wstr"
+                      length="7"
+                      name="NW_SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_GRP_ID]"
+                      dataType="wstr"
+                      length="11"
+                      name="NW_GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Copy of NW_SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="Copy of NW_GRP_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Load Data SubGroup\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data SubGroup\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_ID]"
+                      length="4"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]"
+                      name="SUBGRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_NAME]"
+                      length="30"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]"
+                      name="SUBGRP_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]"
+                      name="EFF_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]"
+                      name="TERM_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GROUP_ID]"
+                      length="8"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]"
+                      name="GROUP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="SUBGRP_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EFF_DT]"
+                      dataType="date"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TERM_DT]"
+                      dataType="date"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GROUP_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data SubGroup\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Group_2121507]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Group_2121507]) [refTable]
+where [refTable].[GROUP_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="GRP_SK" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GROUP_ID" dataType="DT_STR" length="8" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="GROUP_NAME" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EFF_DT" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TERM_DT" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="STREET" dataType="DT_STR" length="35" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CITY" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="STATE" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ZIP" dataType="DT_NUMERIC" length="0" precision="5" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data SubGroup\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input].Columns[GROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GROUP_ID"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[GROUP_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">GROUP_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Match Output].Columns[GROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="8"
+                      lineageId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Match Output].Columns[GROUP_ID]"
+                      name="GROUP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">GROUP_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data SubGroup\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SUBGRP_2121507]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data SubGroup\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      externalMetadataColumnId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_ID]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SUBGRP_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="SUBGRP_NAME"
+                      externalMetadataColumnId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_NAME]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      externalMetadataColumnId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      externalMetadataColumnId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GROUP_ID"
+                      externalMetadataColumnId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GROUP_ID]"
+                      lineageId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Match Output].Columns[GROUP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_SK]"
+                      dataType="numeric"
+                      name="SUBGRP_SK"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="SUBGRP_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EFF_DT]"
+                      dataType="dbDate"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERM_DT]"
+                      dataType="dbDate"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GROUP_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data SubGroup\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data SubGroup\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data SubGroup\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Data SubGroup.Paths[Conditional Split Default Output]"
+              endId="Package\Load Data SubGroup\Derived Column.Inputs[Derived Column Input]"
+              name="Conditional Split Default Output"
+              startId="Package\Load Data SubGroup\check NUll.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\Load Data SubGroup.Paths[Derived Column Output]"
+              endId="Package\Load Data SubGroup\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Load Data SubGroup\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load Data SubGroup.Paths[Flat File Source Output]"
+              endId="Package\Load Data SubGroup\check NUll.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Data SubGroup\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load Data SubGroup.Paths[Lookup Match Output]"
+              endId="Package\Load Data SubGroup\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Load Data SubGroup\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load Data SubGroup.Paths[Lookup No Match Output]"
+              endId="Package\Load Data SubGroup\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load Data SubGroup\Lookup.Outputs[Lookup No Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Load Data SubGroup"
+          TopLeft="30.7142862373469,22.9411767923295" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Data SubGroup">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Load Data SubGroup\Flat File Source"
+          TopLeft="75.9714298243426,23.7058826854072" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load Data SubGroup\Flat File Destination"
+          TopLeft="433.571435955106,229.411767923296" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Load Data SubGroup\Lookup"
+          TopLeft="242.857146992975,188.88235559018" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Load Data SubGroup\OLE DB Destination"
+          TopLeft="273.571433230322,330.352945809546" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Load Data SubGroup\check NUll"
+          TopLeft="293.114290665121,26.7647062577178" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Load Data SubGroup\Derived Column"
+          TopLeft="622.857153464338,116.235295747804" />
+        <EdgeLayout
+          Id="Package\Load Data SubGroup.Paths[Lookup Match Output]"
+          TopLeft="299.257146992975,230.48235559018">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.514286237347,99.8705902193658"
+              Start="0,0"
+              End="59.514286237347,92.3705902193658">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9352951096829" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.9352951096829"
+                    Point2="0,49.9352951096829"
+                    Point3="4,49.9352951096829" />
+                  <mssgle:LineSegment
+                    End="55.514286237347,49.9352951096829" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.514286237347,49.9352951096829"
+                    Point2="59.514286237347,49.9352951096829"
+                    Point3="59.514286237347,53.9352951096829" />
+                  <mssgle:LineSegment
+                    End="59.514286237347,92.3705902193658" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.4342436000765,54.9352951096829,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data SubGroup.Paths[Flat File Source Output]"
+          TopLeft="226.371429824343,46.0352944715625">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.7428608407784,0"
+              Start="0,0"
+              End="59.2428608407784,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.2428608407784,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data SubGroup.Paths[Derived Column Output]"
+          TopLeft="699.257153464338,157.835295747804">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-400.000006471362,31.0470598423765"
+              Start="0,0"
+              End="-400.000006471362,23.5470598423765">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5235299211883" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5235299211883"
+                    Point2="0,15.5235299211883"
+                    Point3="-4,15.5235299211883" />
+                  <mssgle:LineSegment
+                    End="-396.000006471362,15.5235299211883" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-396.000006471362,15.5235299211883"
+                    Point2="-400.000006471362,15.5235299211883"
+                    Point3="-400.000006471362,19.5235299211883" />
+                  <mssgle:LineSegment
+                    End="-400.000006471362,23.5470598423765" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data SubGroup.Paths[Conditional Split Default Output]"
+          TopLeft="356.714290665121,68.3647062577178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="342.542862799217,47.8705894900858"
+              Start="0,0"
+              End="342.542862799217,40.3705894900858">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9352947450429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9352947450429"
+                    Point2="0,23.9352947450429"
+                    Point3="4,23.9352947450429" />
+                  <mssgle:LineSegment
+                    End="338.542862799217,23.9352947450429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="338.542862799217,23.9352947450429"
+                    Point2="342.542862799217,23.9352947450429"
+                    Point3="342.542862799217,27.9352947450429" />
+                  <mssgle:LineSegment
+                    End="342.542862799217,40.3705894900858" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="100.657525149608,28.9352947450429,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data SubGroup.Paths[Lookup No Match Output]"
+          TopLeft="355.657146992975,209.68235559018">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.9142889621308,40.5294123331155"
+              Start="0,0"
+              End="70.4142889621308,40.5294123331155">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.9571444810654,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.9571444810654,0"
+                    Point2="38.9571444810654,0"
+                    Point3="38.9571444810654,4" />
+                  <mssgle:LineSegment
+                    End="38.9571444810654,36.5294123331155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.9571444810654,36.5294123331155"
+                    Point2="38.9571444810654,40.5294123331155"
+                    Point3="42.9571444810654,40.5294123331155" />
+                  <mssgle:LineSegment
+                    End="70.4142889621308,40.5294123331155" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.8492422376846,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data SubGroup\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Group_2121507]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data SubGroup\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

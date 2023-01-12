@@ -1,0 +1,2689 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/16/2022 5:12:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CRD8C2K"
+  DTS:CreatorName="DESKTOP-CRD8C2K\HP"
+  DTS:DTSID="{0A8ADC67-79D3-4216-B38D-E65449D82568}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{4FB38CA5-183D-4E0E-B432-A08FC9694A79}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CDC7785F-9259-411D-AD30-3EAA88E324E9}"
+      DTS:ObjectName="DESKTOP-CRD8C2K.HealthCareSystem">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CRD8C2K;Initial Catalog=HealthCareSystem;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0D431C70-3259-42F4-986A-F011F0065B3C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\subscriber_comma.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUB_ID"
+              DTS:DTSID="{1BE8F47B-20E4-4293-9153-10CBDF276223}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_NAME"
+              DTS:DTSID="{60BF8C4A-D490-4006-9859-A93CF9BFE1B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST_NAME"
+              DTS:DTSID="{A4303B5A-8D6B-4133-BA87-E14D02393444}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GENDER"
+              DTS:DTSID="{21668433-18B4-4F01-9383-398BCCAED0C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BIRTH_DT"
+              DTS:DTSID="{7BEA2CC3-12D4-4483-8FDC-7CBECFFB2F2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_ID"
+              DTS:DTSID="{421F6B54-9DBE-4A01-B159-80A6A0D7BF4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GRP_ID"
+              DTS:DTSID="{694A5C86-74D3-43CC-B9A5-9FE9F59970F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_DT"
+              DTS:DTSID="{2BD6D314-0BF7-4C22-BB34-89DC0D6E8D2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERM_DT"
+              DTS:DTSID="{F69784A1-57AE-4B5C-B3FA-B4FD271F211E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ELIG_IND"
+              DTS:DTSID="{5A2B4817-A69B-4C23-9B17-65C6AE20EE39}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{383A0789-0C33-477E-A1F5-838D486E543D}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\SUBSCRIBER_ERRORS.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUB_ID"
+              DTS:DTSID="{5C856756-E23B-42EC-98A8-64BE981D8C29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_NAME"
+              DTS:DTSID="{71AAE074-90E9-4ED4-8C7D-3CF54EE0F00E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST_NAME"
+              DTS:DTSID="{155FCB9D-0926-4B77-95DD-7E245F4E3040}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GENDER"
+              DTS:DTSID="{F2361B82-3626-48F5-90D4-F616F7284A8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BIRTH_DT"
+              DTS:DTSID="{FE8E8741-A335-44C3-ADFC-29AEE2A1CCC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_ID"
+              DTS:DTSID="{FA1C028A-9B5B-4D2E-BC5A-5AF4B0B237F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GRP_ID"
+              DTS:DTSID="{C400E9B9-0420-42F8-9006-8C15AC4FCF7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_DT"
+              DTS:DTSID="{9CACEA34-E0E0-43AA-B9C2-36FFB56A1DF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERM_DT"
+              DTS:DTSID="{6AF40DD2-C767-4252-8C84-51CB46A370A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ELIG_IND"
+              DTS:DTSID="{B9CE0C06-6B2E-4FA9-B8A4-D1650CE13910}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{469747B5-0D1D-432A-B4E2-133A83FDC698}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\LookUpNomatchSubscriber.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUB_ID"
+              DTS:DTSID="{673BE1EC-BAF7-4641-94DD-DF8EA3D60262}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_NAME"
+              DTS:DTSID="{7AAACA37-7306-4BED-8C62-B504000663BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST_NAME"
+              DTS:DTSID="{BF71565C-67C5-4851-8B99-952AD271EFC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GENDER"
+              DTS:DTSID="{844CDE0E-3130-4839-8C66-3B7954ED24C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BIRTH_DT"
+              DTS:DTSID="{02B8D2A3-EA44-487F-81AE-15F7FC380E93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBGRP_ID"
+              DTS:DTSID="{89814BE4-E739-42DF-A582-AA90408D0BAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GRP_ID"
+              DTS:DTSID="{F8AF1218-9D26-4124-AFED-736D916FE94B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_DT"
+              DTS:DTSID="{996C4737-09F0-4995-BE12-EDDF02E8C912}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERM_DT"
+              DTS:DTSID="{179D4C4C-F4A1-40FC-B5D1-ED1B39805768}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ELIG_IND"
+              DTS:DTSID="{5B915C83-BAF8-4A34-A1E2-D3DFDDBEB67E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NW_SUBDRP_ID"
+              DTS:DTSID="{59FE524A-E002-4E2C-877D-7D51ACDA8F37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NW_GRP_ID"
+              DTS:DTSID="{A0781DBC-73C3-414D-93EC-2CE117FB9996}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of NW_SUBDRP_ID"
+              DTS:DTSID="{EC3C742F-5512-4C4A-B2FA-3E87BB4B0AAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of NW_GRP_ID"
+              DTS:DTSID="{7EAED3AD-2DFC-4A15-88F7-E5416CDD2D5D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Data Subscribers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6FCB32B0-D74C-40F2-AFC7-FC37563C8E43}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Data Subscribers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Data Subscribers\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input].Columns[NW_SUBDRP_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="NW_SUBDRP_ID"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_SUBDRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input].Columns[NW_GRP_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="NW_GRP_ID"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_GRP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]"
+                      name="Copy of NW_SUBDRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_SUBDRP_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]"
+                      name="Copy of NW_GRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_GRP_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data Subscribers\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[SUB_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SUB_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUB_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[LAST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[FIRST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[GENDER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="GENDER"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GENDER]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[BIRTH_DT]"
+                      cachedDataType="date"
+                      cachedName="BIRTH_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BIRTH_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[ELIG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ELIG_IND"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ELIG_IND]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[NW_SUBDRP_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="NW_SUBDRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_SUBDRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_SUBDRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[NW_GRP_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="NW_GRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_GRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_GRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[Copy of NW_SUBDRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Copy of NW_SUBDRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_SUBDRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].Columns[Copy of NW_GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Copy of NW_GRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_GRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUB_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="SUB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GENDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GENDER" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BIRTH_DT]"
+                      dataType="date"
+                      name="BIRTH_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      dataType="date"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      dataType="date"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ELIG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ELIG_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_SUBDRP_ID]"
+                      dataType="wstr"
+                      length="7"
+                      name="NW_SUBDRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NW_GRP_ID]"
+                      dataType="wstr"
+                      length="11"
+                      name="NW_GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_SUBDRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Copy of NW_SUBDRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Copy of NW_GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="Copy of NW_GRP_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data Subscribers\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUB_ID]"
+                      length="9"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]"
+                      name="SUB_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[LAST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LAST_NAME]"
+                      length="30"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[LAST_NAME]"
+                      name="LAST_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FIRST_NAME]"
+                      length="30"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GENDER]"
+                      length="1"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]"
+                      name="GENDER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BIRTH_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]"
+                      name="BIRTH_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_ID]"
+                      length="4"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]"
+                      name="SUBGRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GRP_ID]"
+                      length="8"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]"
+                      name="GRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]"
+                      name="EFF_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]"
+                      name="TERM_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ELIG_IND]"
+                      length="1"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]"
+                      name="ELIG_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUB_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="SUB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LAST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FIRST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GENDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GENDER" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BIRTH_DT]"
+                      dataType="date"
+                      name="BIRTH_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EFF_DT]"
+                      dataType="date"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TERM_DT]"
+                      dataType="date"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ELIG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ELIG_IND" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[SUBGRP_2121507]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[SUBGRP_2121507]) [refTable]
+where [refTable].[SUBGRP_ID] = ? and [refTable].[GROUP_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SUBGRP_SK" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SUBGRP_ID" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SUBGRP_NAME" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EFF_DT" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TERM_DT" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GROUP_ID" dataType="DT_STR" length="8" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]};#{Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data Subscribers\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input].Columns[Copy of NW_SUBDRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Copy of NW_SUBDRP_ID"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SUBGRP_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input].Columns[Copy of NW_GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Copy of NW_GRP_ID"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">GROUP_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPSUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="4"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPSUBGRP_ID]"
+                      name="LKPSUBGRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SUBGRP_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPGROUP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="8"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPGROUP_ID]"
+                      name="LKPGROUP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">GROUP_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SUBSCRIBER_2121507]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data Subscribers\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CRD8C2K.HealthCareSystem]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SUB_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SUB_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUB_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LAST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FIRST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GENDER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="GENDER"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GENDER]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BIRTH_DT]"
+                      cachedDataType="date"
+                      cachedName="BIRTH_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ELIG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ELIG_IND"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ELIG_IND]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LKPSUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="LKPSUBGRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPSUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LKPGROUP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="LKPGROUP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output].Columns[LKPGROUP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUB_SK]"
+                      dataType="numeric"
+                      name="SUB_SK"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUB_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="SUB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GENDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GENDER" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_DT]"
+                      dataType="dbDate"
+                      name="BIRTH_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EFF_DT]"
+                      dataType="dbDate"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERM_DT]"
+                      dataType="dbDate"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ELIG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ELIG_IND" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\Populating_Zeros"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Populating_Zeros"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input].Columns[GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GRP_ID"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_SUBDRP_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_SUBDRP_ID]"
+                      name="NW_SUBDRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"000" + #{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"000" + SUBGRP_ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_GRP_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output].Columns[NW_GRP_ID]"
+                      name="NW_GRP_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"000" + #{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"000" + GRP_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="SUBSCRIBER_ERRORS"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[SUB_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SUB_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[SUB_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[LAST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[FIRST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[GENDER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="GENDER"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[GENDER]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[BIRTH_DT]"
+                      cachedDataType="date"
+                      cachedName="BIRTH_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[BIRTH_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[SUBGRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="SUBGRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUBGRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="GRP_ID"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[GRP_ID]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].Columns[ELIG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ELIG_IND"
+                      externalMetadataColumnId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[ELIG_IND]"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[SUB_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="SUB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[GENDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="GENDER" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[BIRTH_DT]"
+                      dataType="date"
+                      name="BIRTH_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[SUBGRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="SUBGRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[GRP_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="GRP_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[EFF_DT]"
+                      dataType="date"
+                      name="EFF_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[TERM_DT]"
+                      dataType="date"
+                      name="TERM_DT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input].ExternalColumns[ELIG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ELIG_IND" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\SUB_ID_VALID"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="SUB_ID_VALID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input].Columns[SUB_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SUB_ID"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[SUB_ID_VALIDATION]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SUB_ID_VALIDATION"
+                  synchronousInputId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[LEN](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]}) &gt;= 9</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">LEN(SUB_ID) &gt;= 9</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\SYSDT_CHECK"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="SYSDT_CHECK"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[checkDT]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="checkDT"
+                  synchronousInputId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[YEAR](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]}) &gt; ([YEAR]([GETDATE]()) - 8)</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">YEAR(TERM_DT) &gt; (YEAR(GETDATE()) - 8)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\TargetTableValidation"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="TargetTableValidation"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[SUB_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SUB_ID"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[FIRST_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="FIRST_NAME"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[GENDER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="GENDER"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[BIRTH_DT]"
+                      cachedDataType="date"
+                      cachedName="BIRTH_DT"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[EFF_DT]"
+                      cachedDataType="date"
+                      cachedName="EFF_DT"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[TERM_DT]"
+                      cachedDataType="date"
+                      cachedName="TERM_DT"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[ELIG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ELIG_IND"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[Copy of NW_SUBDRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Copy of NW_SUBDRP_ID"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]" />
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input].Columns[Copy of NW_GRP_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Copy of NW_GRP_ID"
+                      lineageId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\TargetTableValidation.Outputs[CheckNull]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="CheckNull"
+                  synchronousInputId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_GRP_ID]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NW_SUBDRP_ID]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[TERM_DT]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[EFF_DT]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[BIRTH_DT]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[GENDER]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[FIRST_NAME]}) &amp;&amp; [ISNULL](#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[SUB_ID]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([Copy of NW_GRP_ID]) &amp;&amp; ISNULL([Copy of NW_SUBDRP_ID]) &amp;&amp; ISNULL(ELIG_IND) &amp;&amp; ISNULL(TERM_DT) &amp;&amp; ISNULL(EFF_DT) &amp;&amp; ISNULL(BIRTH_DT) &amp;&amp; ISNULL(GENDER) &amp;&amp; ISNULL(FIRST_NAME) &amp;&amp; ISNULL(SUB_ID)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Subscribers\YES_NO_VALIDATION"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="YES_NO_VALIDATION"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input].Columns[ELIG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ELIG_IND"
+                      lineageId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[YES]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="YES"
+                  synchronousInputId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output].Columns[ELIG_IND]} == "Y"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ELIG_IND == "Y"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[NO]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NO"
+                  synchronousInputId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Data Subscribers.Paths[checkDT]"
+              endId="Package\Load Data Subscribers\YES_NO_VALIDATION.Inputs[Conditional Split Input]"
+              name="checkDT"
+              startId="Package\Load Data Subscribers\SYSDT_CHECK.Outputs[checkDT]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Conditional Split Default Output]"
+              endId="Package\Load Data Subscribers\Lookup.Inputs[Lookup Input]"
+              name="Conditional Split Default Output"
+              startId="Package\Load Data Subscribers\TargetTableValidation.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Data Conversion Output]"
+              endId="Package\Load Data Subscribers\TargetTableValidation.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\Load Data Subscribers\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Derived Column Output]"
+              endId="Package\Load Data Subscribers\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Load Data Subscribers\Populating_Zeros.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Flat File Source Output]"
+              endId="Package\Load Data Subscribers\SYSDT_CHECK.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Data Subscribers\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Lookup Match Output]"
+              endId="Package\Load Data Subscribers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Load Data Subscribers\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[Lookup No Match Output]"
+              endId="Package\Load Data Subscribers\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load Data Subscribers\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[NO]"
+              endId="Package\Load Data Subscribers\SUBSCRIBER_ERRORS.Inputs[Flat File Destination Input]"
+              name="NO"
+              startId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[NO]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[SUB_ID_VALIDATION]"
+              endId="Package\Load Data Subscribers\Populating_Zeros.Inputs[Derived Column Input]"
+              name="SUB_ID_VALIDATION"
+              startId="Package\Load Data Subscribers\SUB_ID_VALID.Outputs[SUB_ID_VALIDATION]" />
+            <path
+              refId="Package\Load Data Subscribers.Paths[YES]"
+              endId="Package\Load Data Subscribers\SUB_ID_VALID.Inputs[Conditional Split Input]"
+              name="YES"
+              startId="Package\Load Data Subscribers\YES_NO_VALIDATION.Outputs[YES]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Load Data Subscribers"
+          TopLeft="30.7142862373469,22.9411767923295" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Data Subscribers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Load Data Subscribers\SYSDT_CHECK"
+          TopLeft="240.000004087176,39.0000005469597" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Load Data Subscribers\Flat File Source"
+          TopLeft="42.1428578605457,39.0000005469603" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Flat File Source Output]"
+          TopLeft="192.542857860546,59.80000054696">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.4571462266304,0"
+              Start="0,0"
+              End="39.9571462266304,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.9571462266304,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Load Data Subscribers\YES_NO_VALIDATION"
+          TopLeft="447.857150484105,44.3529417985038" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[checkDT]"
+          TopLeft="388.000004087176,62.4764711727318">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.8571463969286,0"
+              Start="0,0"
+              End="52.3571463969286,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="52.3571463969286,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="6.4902528859643,5,39.376640625,9.724609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Load Data Subscribers\SUB_ID_VALID"
+          TopLeft="690.71429747708,136.8823548609" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[YES]"
+          TopLeft="539.457150484105,85.9529417985038">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="226.057146992975,50.9294130623959"
+              Start="0,0"
+              End="226.057146992975,43.4294130623959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.464706531198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.464706531198"
+                    Point2="0,25.464706531198"
+                    Point3="4,25.464706531198" />
+                  <mssgle:LineSegment
+                    End="222.057146992975,25.464706531198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="222.057146992975,25.464706531198"
+                    Point2="226.057146992975,25.464706531198"
+                    Point3="226.057146992975,29.464706531198" />
+                  <mssgle:LineSegment
+                    End="226.057146992975,43.4294130623959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="103.655585215238,30.464706531198,18.7459765625,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Load Data Subscribers\SUBSCRIBER_ERRORS"
+          TopLeft="679.285725853881,12.2352942892424" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[NO]"
+          TopLeft="631.057150484105,65.1529417985038">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.2285753697766,-32.1176475092614"
+              Start="0,0"
+              End="40.7285753697766,-32.1176475092614">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20.1142876848883,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.1142876848883,0"
+                    Point2="24.1142876848883,0"
+                    Point3="24.1142876848883,-4" />
+                  <mssgle:LineSegment
+                    End="24.1142876848883,-28.1176475092614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.1142876848883,-28.1176475092614"
+                    Point2="24.1142876848883,-32.1176475092614"
+                    Point3="28.1142876848883,-32.1176475092614" />
+                  <mssgle:LineSegment
+                    End="40.7285753697766,-32.1176475092614" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.7714751848883,1,14.685625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Load Data Subscribers\Populating_Zeros"
+          TopLeft="380.457148355368,147.588237363987" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[SUB_ID_VALIDATION]"
+          TopLeft="690.71429747708,157.6823548609">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-151.057149121712,10.7058825030873"
+              Start="0,0"
+              End="-143.557149121712,10.7058825030873">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-71.528574560856,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-71.528574560856,0"
+                    Point2="-75.528574560856,0"
+                    Point3="-75.528574560856,4" />
+                  <mssgle:LineSegment
+                    End="-75.528574560856,6.70588250308725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-75.528574560856,6.70588250308725"
+                    Point2="-75.528574560856,10.7058825030873"
+                    Point3="-79.528574560856,10.7058825030873" />
+                  <mssgle:LineSegment
+                    End="-143.557149121712,10.7058825030873" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-124.089336279606,-16.88671875,97.1215234375,10.88671875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Load Data Subscribers\Data Conversion"
+          TopLeft="44.9142858115995,187.352943804025" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Derived Column Output]"
+          TopLeft="380.457148355368,168.388237363987">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-180.342862543768,39.7647064400379"
+              Start="0,0"
+              End="-172.842862543768,39.7647064400379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-86.1714312718841,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86.1714312718841,0"
+                    Point2="-90.1714312718841,0"
+                    Point3="-90.1714312718841,4" />
+                  <mssgle:LineSegment
+                    End="-90.1714312718841,35.7647064400379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.1714312718841,35.7647064400379"
+                    Point2="-90.1714312718841,39.7647064400379"
+                    Point3="-94.1714312718841,39.7647064400379" />
+                  <mssgle:LineSegment
+                    End="-172.842862543768,39.7647064400379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Load Data Subscribers\TargetTableValidation"
+          TopLeft="110.628572644993,266.117650791023" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Data Conversion Output]"
+          TopLeft="122.514285811599,228.952943804025">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.5142868333933,37.1647069869982"
+              Start="0,0"
+              End="78.5142868333933,29.6647069869982">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5823534934991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5823534934991"
+                    Point2="0,18.5823534934991"
+                    Point3="4,18.5823534934991" />
+                  <mssgle:LineSegment
+                    End="74.5142868333933,18.5823534934991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74.5142868333933,18.5823534934991"
+                    Point2="78.5142868333933,18.5823534934991"
+                    Point3="78.5142868333933,22.5823534934991" />
+                  <mssgle:LineSegment
+                    End="78.5142868333933,29.6647069869982" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Load Data Subscribers\Lookup"
+          TopLeft="361.342862628917,279.882356866421" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Conditional Split Default Output]"
+          TopLeft="291.428572644993,286.917650791023">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.9142899839246,13.7647060753977"
+              Start="0,0"
+              End="62.4142899839246,13.7647060753977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.9571449919623,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.9571449919623,0"
+                    Point2="34.9571449919623,0"
+                    Point3="34.9571449919623,4" />
+                  <mssgle:LineSegment
+                    End="34.9571449919623,9.76470607539773" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.9571449919623,9.76470607539773"
+                    Point2="34.9571449919623,13.7647060753977"
+                    Point3="38.9571449919623,13.7647060753977" />
+                  <mssgle:LineSegment
+                    End="62.4142899839246,13.7647060753977" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.6567612580377,-17.658203125,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Load Data Subscribers\OLE DB Destination"
+          TopLeft="318.485719041922,391.600005469603" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Lookup Match Output]"
+          TopLeft="417.742862628917,321.482356866421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.0571435869956,70.117648603182"
+              Start="0,0"
+              End="-14.0571435869956,62.617648603182">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.058824301591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.058824301591"
+                    Point2="0,35.058824301591"
+                    Point3="-4,35.058824301591" />
+                  <mssgle:LineSegment
+                    End="-10.0571435869956,35.058824301591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.0571435869956,35.058824301591"
+                    Point2="-14.0571435869956,35.058824301591"
+                    Point3="-14.0571435869956,39.058824301591" />
+                  <mssgle:LineSegment
+                    End="-14.0571435869956,62.617648603182" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.2199585122478,40.058824301591,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load Data Subscribers\Flat File Destination"
+          TopLeft="553.485723043948,294.42353329411" />
+        <EdgeLayout
+          Id="Package\Load Data Subscribers.Paths[Lookup No Match Output]"
+          TopLeft="474.142862628917,300.682356866421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.3428604150308,14.5411764276894"
+              Start="0,0"
+              End="71.8428604150308,14.5411764276894">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.6714302075154,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.6714302075154,0"
+                    Point2="39.6714302075154,0"
+                    Point3="39.6714302075154,4" />
+                  <mssgle:LineSegment
+                    End="39.6714302075154,10.5411764276894" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.6714302075154,10.5411764276894"
+                    Point2="39.6714302075154,14.5411764276894"
+                    Point3="43.6714302075154,14.5411764276894" />
+                  <mssgle:LineSegment
+                    End="71.8428604150308,14.5411764276894" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.1349565112346,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Subscribers\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[SUBGRP_2121507]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Subscribers\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

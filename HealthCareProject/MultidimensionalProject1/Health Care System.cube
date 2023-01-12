@@ -1,0 +1,373 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fd18731f-ba16-4721-91c9-b5b60062c461" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Health Care System</ID>
+  <Name>Health Care System</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="7" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6890" scrolltop="-2387" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="17420" y="15833" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Group_2121507" left="6477" top="7201" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3154" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000520c00000a100000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Group_2121507" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="SUBSCRIBER_2121507" left="1939" top="-403" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_SUBSCRIBER_2121507" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4239" top="4123" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3115" height="3578" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[SUBSCRIBER_2121507-Group_2121507]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="0" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6954" y="7201" />
+              <point x="6954" y="5812" />
+              <point x="4539" y="5812" />
+              <point x="4539" y="4423" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="SUBGRP_2121507" left="-6755" top="2236" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3069" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000fd0b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_SUBGRP_2121507" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-3986" top="2250" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="6225" height="2260" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[SUBGRP_2121507-SUBSCRIBER_2121507]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="11" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-3686" y="2649" />
+              <point x="-175" y="2649" />
+              <point x="-175" y="4210" />
+              <point x="1939" y="4210" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-6890</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2387</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-6755</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-403</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="95883b08-cbc6-4df1-8f14-6ea2eba68e22">
+      <ID>Group 2121507</ID>
+      <Name>Group 2121507</Name>
+      <DimensionID>Group 2121507</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d529fa03-3fc1-43a4-a951-1b4e5efd6320">
+          <AttributeID>GROUP ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4777c142-142e-4c95-85f4-76b8bb617dfe">
+      <ID>SUBSCRIBER 2121507</ID>
+      <Name>SUBSCRIBER 2121507</Name>
+      <DimensionID>SUBSCRIBER 2121507</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bcc8b744-4111-43f6-9ad5-590072d17b25">
+          <AttributeID>SUB ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba78d154-5f16-4679-8326-463ab0df966a">
+          <AttributeID>SUBGRP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="677a0c7d-6a0d-45a3-b87d-c411701fecb4">
+          <AttributeID>GROUP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6f71285-e429-4544-b3d5-901b70b8dcf4">
+          <AttributeID>GROUP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1b44b43-8eee-4150-aa34-ad565d9f14e8">
+          <AttributeID>SUBGRP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a984795-79a1-454e-94fd-7b926ab7ec36">
+          <AttributeID>CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d668b4a-acda-4745-9ca3-1bae597b9d93">
+          <AttributeID>STATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="808eb3f8-8f19-4280-b458-fa221e2f26b0">
+          <AttributeID>STREET</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="cc8a2add-6022-4020-bea6-ece6fb9977af">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="2bbce993-a7a2-44ec-befe-b63f1361faed">
+      <ID>SUBGRP</ID>
+      <Name>SUBGRP</Name>
+      <DimensionID>SUBSCRIBER 2121507</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="38cebbb7-0a0c-4f22-aa18-8525e4016b9b">
+          <AttributeID>SUB ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb4e6280-ef5d-45e6-afb0-f2d25bd8fce3">
+          <AttributeID>SUBGRP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ddb11307-f173-44e3-a71b-4b8c2d04880b">
+          <AttributeID>GROUP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5d4b53e-3e1c-47b8-a734-7d979c1ca202">
+          <AttributeID>GROUP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bef050bf-95af-4d78-9638-723a517f6f2f">
+          <AttributeID>SUBGRP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24c7677b-5bdc-4c50-a95f-f9486b8a2c74">
+          <AttributeID>CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5edf9b6-18ae-4bdf-b8e9-1f75fce79094">
+          <AttributeID>STATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b65f7f01-e1c2-43c9-871a-4efaa7063b2c">
+          <AttributeID>STREET</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3961d192-d7b6-4975-922e-ebda13791b9e">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="a096a370-197d-41de-a8a2-39e74be99fec">
+      <ID>GRP</ID>
+      <Name>GRP</Name>
+      <DimensionID>SUBSCRIBER 2121507</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bc44d69e-c569-4ec4-8a5d-63c811688ab7">
+          <AttributeID>SUB ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="84d19ace-25a6-4e21-b675-137e902758e2">
+          <AttributeID>SUBGRP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fda4d5ca-ad10-4794-b264-b25ed6ab3891">
+          <AttributeID>GROUP ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bdd9a447-3a22-4b28-827b-85e0a00c252f">
+          <AttributeID>GROUP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d34ecdc9-0565-4326-8e67-7ba7247b2cbb">
+          <AttributeID>SUBGRP NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8a620ffe-1b61-4e08-96f1-f4c859eee693">
+          <AttributeID>CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da6f6722-a942-4c1c-bfdc-6352c5aa1051">
+          <AttributeID>STATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="633f2c1c-bc64-4466-aaaa-5898ee1ed6d7">
+          <AttributeID>STREET</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="08b451cb-c517-4455-b846-2545d60aeccc">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="44c91b2f-1ed6-42ba-8018-c5db4b54976c">
+      <ID>SUBSCRIBER 2121507</ID>
+      <Name>SUBSCRIBER 2121507</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5851dae9-8af6-4694-a113-91e8756dd9a2">
+          <ID>SUB SK</ID>
+          <Name>SUB SK</Name>
+          <Source dwd:design-time-name="3a3640cc-f9a1-4820-b19a-1262c3171887">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="da5224fd-85f3-43d5-913f-5dcbe6a4a3fa">
+              <TableID>dbo_SUBSCRIBER_2121507</TableID>
+              <ColumnID>SUB_SK</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="794441f0-55bd-48a0-ba4a-9dcec16dbf39">
+          <ID>SUBSCRIBER 2121507 Count</ID>
+          <Name>SUBSCRIBER 2121507 Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1722b4c0-1f22-4bf2-976d-12c17c626a66">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2a7bc3d8-7a7b-44e8-8795-8e61d86f3481">
+              <TableID>dbo_SUBSCRIBER_2121507</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="da318fd6-8c84-4d92-a5d4-eec8a86e667b">
+          <CubeDimensionID>Group 2121507</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="db360620-e311-434d-a272-f3e6240d58e7">
+              <AttributeID>GROUP ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="de7db4f0-99d6-43c8-b0cb-df9a9b8e6a52">
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ff6c739a-ab21-499d-a659-1848db41c5d9">
+                    <TableID>dbo_SUBSCRIBER_2121507</TableID>
+                    <ColumnID>GRP_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3c3e005f-dc6a-4e60-bd3c-f24fe4097711">
+          <CubeDimensionID>SUBSCRIBER 2121507</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4910edbb-b99c-4442-901c-8615605463db">
+              <AttributeID>SUB ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d48bbfcc-7330-4d10-88fe-d797d0b55336">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="04902bc7-334d-4e8f-b660-62f7b360bd5f">
+                    <TableID>dbo_SUBSCRIBER_2121507</TableID>
+                    <ColumnID>SUB_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="1eecce84-79bf-45bb-a2ff-a8a065d0496a">
+          <CubeDimensionID>SUBGRP</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8f0af927-1dea-4da8-8532-a82d1e74cba1">
+              <AttributeID>SUB ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9c400538-da67-4288-aa72-c7c4d015ccd1">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dae0407c-ef20-4384-b50b-f2e82573a715">
+                    <TableID>dbo_SUBSCRIBER_2121507</TableID>
+                    <ColumnID>SUB_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="1361fb32-4d0b-4a9f-9601-f709d05daee7">
+          <CubeDimensionID>GRP</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="79193a90-7d7b-4474-b22c-7edb1c95cf68">
+              <AttributeID>SUB ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3a0e1e2b-363b-4d58-9e9d-d87b810ffae3">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e6ff2e51-171f-450e-a683-f4d2db619f03">
+                    <TableID>dbo_SUBSCRIBER_2121507</TableID>
+                    <ColumnID>SUB_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="870e3d12-fe8e-4615-bf43-ddfb1bf88ae9">
+    <DataSourceViewID>Health Care System</DataSourceViewID>
+  </Source>
+</Cube>

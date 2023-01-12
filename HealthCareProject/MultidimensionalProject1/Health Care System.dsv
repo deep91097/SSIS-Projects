@@ -1,0 +1,297 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="44aa6092-2ff5-4c5f-8403-f2a83a631387" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Health Care System</ID>
+  <Name>Health Care System</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7575" scrolltop="22" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="95" x="18013" y="17844" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Group_2121507" left="-6123" top="5406" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3154" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000520c00000a100000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Group_2121507" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="SUBGRP_2121507" left="6771" top="5372" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3302" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000e60c0000d30b0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_SUBGRP_2121507" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="SUBSCRIBER_2121507" left="310" top="2385" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000da120000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_SUBSCRIBER_2121507" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="3010" top="6698" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="4061" height="1137" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[SUBGRP_2121507-SUBSCRIBER_2121507]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="16" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="6771" y="7435" />
+                    <point x="5832" y="7435" />
+                    <point x="5832" y="6998" />
+                    <point x="3310" y="6998" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="-3269" top="5410" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3879" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[SUBSCRIBER_2121507-Group_2121507]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="11" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="-2969" y="5809" />
+                    <point x="-90" y="5809" />
+                    <point x="-90" y="5898" />
+                    <point x="310" y="5898" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-7575</DiagramViewPortLeft>
+            <DiagramViewPortTop>22</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>95</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Health Care System</DataSourceID>
+  <Schema>
+    <xs:schema id="Health_x0020_Care_x0020_System" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Health_x0020_Care_x0020_System" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="de80c9fb-db66-4a4a-b8fa-fe858552d542">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Group_2121507" msprop:design-time-name="a237a819-5d0e-4b48-8f52-b571c32a77c3" msprop:FriendlyName="Group_2121507" msprop:DbSchemaName="dbo" msprop:DbTableName="Group_2121507" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GRP_SK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="8a025933-47f4-44dc-b6bb-7d4892b05909" msprop:DbColumnName="GRP_SK" msprop:FriendlyName="GRP_SK" type="xs:decimal" />
+                  <xs:element name="GROUP_ID" msprop:design-time-name="f27314ca-fd66-4968-b944-d8696112b61e" msprop:DbColumnName="GROUP_ID" msprop:FriendlyName="GROUP_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GROUP_NAME" msprop:design-time-name="8e763e0a-3aa3-420b-af2b-1c1b582ff77f" msprop:DbColumnName="GROUP_NAME" msprop:FriendlyName="GROUP_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFF_DT" msprop:design-time-name="ee54803d-d38e-4497-ab91-42319f508408" msprop:DbColumnName="EFF_DT" msprop:FriendlyName="EFF_DT" type="xs:dateTime" />
+                  <xs:element name="TERM_DT" msprop:design-time-name="2817826a-50f8-48cd-afbe-6700a9d6a973" msprop:DbColumnName="TERM_DT" msprop:FriendlyName="TERM_DT" type="xs:dateTime" />
+                  <xs:element name="STREET" msprop:design-time-name="d039dded-23bc-4e0e-917b-541527f24a55" msprop:DbColumnName="STREET" msprop:FriendlyName="STREET" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="35" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CITY" msprop:design-time-name="fb648479-54d3-4c55-b1ba-9a2e6bf9e452" msprop:DbColumnName="CITY" msprop:FriendlyName="CITY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STATE" msprop:design-time-name="c51af2b5-60b7-4c05-b5cd-27cbfd2db93f" msprop:DbColumnName="STATE" msprop:FriendlyName="STATE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ZIP" msprop:design-time-name="786b507e-09d9-462e-8fd6-73ab759a24b7" msprop:DbColumnName="ZIP" msprop:FriendlyName="ZIP" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_SUBGRP_2121507" msprop:design-time-name="15bb538c-b752-4a04-a751-175a2a3368ff" msprop:FriendlyName="SUBGRP_2121507" msprop:DbSchemaName="dbo" msprop:DbTableName="SUBGRP_2121507" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SUBGRP_SK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="94ed0482-ba93-4381-812a-7af0be0f0c87" msprop:DbColumnName="SUBGRP_SK" msprop:FriendlyName="SUBGRP_SK" type="xs:decimal" />
+                  <xs:element name="SUBGRP_ID" msprop:design-time-name="3aa0a4de-8f0f-4610-9ce9-4565b1ea2ded" msprop:DbColumnName="SUBGRP_ID" msprop:FriendlyName="SUBGRP_ID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SUBGRP_NAME" msprop:design-time-name="72a31e99-197c-473d-996b-2bb07f45c84e" msprop:DbColumnName="SUBGRP_NAME" msprop:FriendlyName="SUBGRP_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFF_DT" msprop:design-time-name="666440a9-9c90-46e5-801c-11ee8aebffeb" msprop:DbColumnName="EFF_DT" msprop:FriendlyName="EFF_DT" type="xs:dateTime" />
+                  <xs:element name="TERM_DT" msprop:design-time-name="f3db346f-5658-4793-8e1a-b7993e27728c" msprop:DbColumnName="TERM_DT" msprop:FriendlyName="TERM_DT" type="xs:dateTime" />
+                  <xs:element name="GROUP_ID" msprop:design-time-name="1c9994ce-cedc-45c0-8aa7-1868341094a3" msprop:DbColumnName="GROUP_ID" msprop:FriendlyName="GROUP_ID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_SUBSCRIBER_2121507" msprop:design-time-name="0abe290e-3663-41dd-b8a4-14104ecab7fa" msprop:FriendlyName="SUBSCRIBER_2121507" msprop:DbSchemaName="dbo" msprop:DbTableName="SUBSCRIBER_2121507" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SUB_SK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="7d1d6223-1820-4c03-b0a1-8637ca99b6ad" msprop:DbColumnName="SUB_SK" msprop:FriendlyName="SUB_SK" type="xs:decimal" />
+                  <xs:element name="SUB_ID" msprop:design-time-name="cf8ff20b-e39c-4216-80de-5f829bcb0fb5" msprop:DbColumnName="SUB_ID" msprop:FriendlyName="SUB_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LAST_NAME" msprop:design-time-name="4d1fc1a8-c1e4-43ac-9b84-819cf7295504" msprop:DbColumnName="LAST_NAME" msprop:FriendlyName="LAST_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FIRST_NAME" msprop:design-time-name="884d4e7c-119b-42f7-82b6-1f39e55def1c" msprop:DbColumnName="FIRST_NAME" msprop:FriendlyName="FIRST_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GENDER" msprop:design-time-name="dc482676-d8b5-41ee-a22e-cac241b788ae" msprop:DbColumnName="GENDER" msprop:FriendlyName="GENDER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BIRTH_DT" msprop:design-time-name="e16b88d2-6ba7-47a6-9095-394d01e39425" msprop:DbColumnName="BIRTH_DT" msprop:FriendlyName="BIRTH_DT" type="xs:dateTime" />
+                  <xs:element name="SUBGRP_ID" msprop:design-time-name="dd4f8c04-2dcb-4fcc-a27d-3abf716e54af" msprop:DbColumnName="SUBGRP_ID" msprop:FriendlyName="SUBGRP_ID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GRP_ID" msprop:design-time-name="3ea55397-0e76-43dc-9037-3a2b48ba043d" msprop:DbColumnName="GRP_ID" msprop:FriendlyName="GRP_ID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFF_DT" msprop:design-time-name="9a07b75a-ff80-4e38-9280-fb71684d5913" msprop:DbColumnName="EFF_DT" msprop:FriendlyName="EFF_DT" type="xs:dateTime" />
+                  <xs:element name="TERM_DT" msprop:design-time-name="956a380f-c9dd-4f0d-ba86-282c1973a471" msprop:DbColumnName="TERM_DT" msprop:FriendlyName="TERM_DT" type="xs:dateTime" />
+                  <xs:element name="ELIG_IND" msprop:design-time-name="8309338d-ad40-45d4-a125-de589ef02437" msprop:DbColumnName="ELIG_IND" msprop:FriendlyName="ELIG_IND">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Group_2121507" />
+          <xs:field xpath="GROUP_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_SUBGRP_2121507_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_SUBGRP_2121507" />
+          <xs:field xpath="SUBGRP_SK" />
+        </xs:unique>
+        <xs:unique name="dbo_SUBSCRIBER_2121507_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_SUBSCRIBER_2121507" />
+          <xs:field xpath="SUB_ID" />
+        </xs:unique>
+        <xs:keyref name="FK__SUBGRP_21__GROUP__48CFD27E" refer="Constraint1" msdata:ConstraintOnly="true">
+          <xs:selector xpath=".//dbo_SUBGRP_2121507" />
+          <xs:field xpath="GROUP_ID" />
+        </xs:keyref>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="SUBGRP_2121507-SUBSCRIBER_2121507" msdata:parent="dbo_SUBGRP_2121507" msdata:child="dbo_SUBSCRIBER_2121507" msdata:parentkey="SUBGRP_ID" msdata:childkey="SUBGRP_ID" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="SUBSCRIBER_2121507-Group_2121507" msdata:parent="dbo_Group_2121507" msdata:child="dbo_SUBSCRIBER_2121507" msdata:parentkey="GROUP_ID" msdata:childkey="GRP_ID" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Health_x0020_Care_x0020_System xmlns="" />
+  </Schema>
+</DataSourceView>
